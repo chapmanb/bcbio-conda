@@ -1,0 +1,30 @@
+package:
+  name: gffutils
+  version: 0.8.2
+
+source:
+  fn: gffutils-0.8.2.tar.gz
+  url: https://pypi.python.org/packages/source/g/gffutils/gffutils-0.8.2.tar.gz
+  md5: b26e67a29b77bab5c7f175d677f1132b
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - simplejson
+    - six
+
+  run:
+    - python
+    - setuptools
+    - simplejson
+    - six
+
+test:
+  imports:
+    - gffutils
+
+about:
+  home: https://github.com/daler/gffutils
+  license: MIT
+  summary: GFF and GTF file manipulation and interconversion
