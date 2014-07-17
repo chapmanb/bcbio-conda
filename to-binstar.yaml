@@ -18,5 +18,8 @@
         - netifaces
         - ipython-cluster-helper
         - gffutils
+        - pyvcf
+        - pysam
         - bcbio-nextgen
         - bcbio-nextgen-vm
+        - cpat

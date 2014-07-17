@@ -2,6 +2,9 @@ package:
   name: netifaces
   version: 0.10.4
 
+build:
+  number: 1
+
 source:
   fn: netifaces-0.10.4.tar.gz
   url: https://pypi.python.org/packages/source/n/netifaces/netifaces-0.10.4.tar.gz
