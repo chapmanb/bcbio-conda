@@ -3,7 +3,7 @@ package:
   version: '0.1.0a'
 
 build:
-  number: 13
+  number: 14
 
 source:
   git_url: https://github.com/chapmanb/bcbio-nextgen-vm.git
@@ -19,6 +19,7 @@ requirements:
     - bcbio-nextgen
     - nose
     - six
+    - boto
 
 test:
   imports:
