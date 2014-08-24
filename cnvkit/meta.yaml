@@ -1,0 +1,35 @@
+package:
+  name: cnvkit
+  version: '0.1dev'
+
+source:
+  git_url: https://github.com/etal/cnvkit.git
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - atlas
+    - numpy
+    - scipy
+    - matplotlib
+    - biopython
+    - reportlab
+    - pysam
+    - pyvcf
+
+test:
+  # Python imports
+  imports:
+    - cnvlib
+
+about:
+  home: https://github.com/etal/cnvkit
+  license: MIT
+  summary: Copy number variant detection from targeted DNA sequencing

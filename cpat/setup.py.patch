@@ -1,5 +1,5 @@
 *** setup.py.orig	2012-08-14 00:51:16.000000000 -0400
---- setup.py	2014-07-24 09:52:04.363631436 -0400
+--- setup.py	2014-07-24 10:38:56.407623334 -0400
 ***************
 *** 16,25 ****
   	print >> sys.stderr, "ERROR: CPAT only works on Python2.x and requires Python 2.7 or greater"

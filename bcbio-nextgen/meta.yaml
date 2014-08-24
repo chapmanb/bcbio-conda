@@ -1,15 +1,15 @@
 package:
   name: bcbio-nextgen
-  version: '0.8.0a'
+  version: '0.8.0'
 
 build:
-  number: 1
+  number: 0
 
 source:
-  #fn: bcbio-nextgen-0.7.7.tar.gz
-  #url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.7.7.tar.gz
-  #md5: 2aa05b9689d3145c673cb2983186de7e
-  git_url: https://github.com/chapmanb/bcbio-nextgen.git
+  fn: bcbio-nextgen-0.8.0.tar.gz
+  url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.8.0.tar.gz
+  md5: 5d9ec2eed5915cc4fd9788923040dda6
+  #git_url: https://github.com/chapmanb/bcbio-nextgen.git
 
 requirements:
   build:
@@ -21,6 +21,8 @@ requirements:
     - setuptools
     - argparse [py26]
     - biopython
+    - bx-python
+    - cpat
     - gffutils
     - ipython
     - ipython-cluster-helper
@@ -28,8 +30,8 @@ requirements:
     - logbook
     - lxml
     - pandas
-    - pyvcf
     - pysam
+    - pyvcf
     - pyyaml
     - pyzmq
     - requests
