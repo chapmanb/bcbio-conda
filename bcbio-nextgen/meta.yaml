@@ -1,9 +1,9 @@
 package:
   name: bcbio-nextgen
-  version: '0.8.1a'
+  version: '0.8.3a'
 
 build:
-  number: 0
+  number: 3
 
 source:
   #fn: bcbio-nextgen-0.8.0.tar.gz
@@ -29,6 +29,7 @@ requirements:
     - joblib
     - logbook
     - lxml
+    - msgpack-python
     - pandas
     - pysam
     - pyvcf

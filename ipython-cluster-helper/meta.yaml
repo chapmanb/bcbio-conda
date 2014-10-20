@@ -1,11 +1,10 @@
 package:
   name: ipython-cluster-helper
-  version: 0.2.24
+  version: 0.3.6
 
 source:
-  fn: ipython-cluster-helper-0.2.24.tar.gz
-  url: https://pypi.python.org/packages/source/i/ipython-cluster-helper/ipython-cluster-helper-0.2.24.tar.gz
-  md5: be89cfd0413b5d755c2751f0a9e12e23
+  fn: ipython-cluster-helper-0.3.6.tar.gz
+  url: https://pypi.python.org/packages/source/i/ipython-cluster-helper/ipython-cluster-helper-0.3.6.tar.gz
 
 requirements:
   build:
