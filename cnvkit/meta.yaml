@@ -1,9 +1,11 @@
 package:
   name: cnvkit
-  version: '0.1dev'
+  version: '0.2.3'
 
 source:
-  git_url: https://github.com/etal/cnvkit.git
+  fn: CNVkit-0.2.3.tar.gz
+  url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.2.3.tar.gz
+  #git_url: https://github.com/etal/cnvkit.git
 
 build:
   number: 0
