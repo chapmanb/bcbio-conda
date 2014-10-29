@@ -1,0 +1,41 @@
+package:
+  name: elasticluster
+  version: '0.1.3bcbio'
+
+source:
+  fn: bcbio-0.1.3bcbio_0.tar.gz
+  url: https://github.com/jwm/elasticluster/archive/066ab80.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - ansible
+    - pycli
+    - paramiko
+    - voluptuous
+    - configobj
+    - boto
+    - google-api-python-client
+    - oauth2client
+    - python-gflags
+
+test:
+  # Python imports
+  imports:
+    - elasticluster
+    - elasticluster.conf
+    - elasticluster.main
+    - elasticluster.providers.ansible_provider
+    - elasticluster.providers.ec2_boto
+
+about:
+  home: https://github.com/gc3-uzh-ch/elasticluster
+  license: GPL
+  summary: Create, manage and setup computing clusters hosted on a public or private cloud infrastructure.

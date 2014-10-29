@@ -3,7 +3,7 @@ package:
   version: '0.1.0a'
 
 build:
-  number: 19
+  number: 20
 
 source:
   git_url: https://github.com/chapmanb/bcbio-nextgen-vm.git
@@ -17,9 +17,9 @@ requirements:
     - python
     - setuptools
     - bcbio-nextgen
+    - elasticluster
     - nose
     - six
-    - boto
 
 test:
   imports:
