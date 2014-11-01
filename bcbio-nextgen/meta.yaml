@@ -3,7 +3,7 @@ package:
   version: '0.8.3a'
 
 build:
-  number: 3
+  number: 4
 
 source:
   #fn: bcbio-nextgen-0.8.0.tar.gz
@@ -21,6 +21,7 @@ requirements:
     - setuptools
     - argparse [py26]
     - biopython
+    - boto
     - bx-python
     - cpat
     - gffutils
