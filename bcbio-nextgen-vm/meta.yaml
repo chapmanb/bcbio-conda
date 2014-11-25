@@ -3,7 +3,7 @@ package:
   version: '0.1.0a'
 
 build:
-  number: 22
+  number: 38
 
 source:
   git_url: https://github.com/chapmanb/bcbio-nextgen-vm.git
@@ -18,6 +18,8 @@ requirements:
     - setuptools
     - bcbio-nextgen
     - elasticluster
+    - matplotlib
+    - pandas
     - nose
     - six
 
