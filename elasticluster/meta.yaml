@@ -3,12 +3,12 @@ package:
   version: '0.1.3bcbio'
 
 source:
-  fn: bcbio-0.1.3bcbio_5.tar.gz
+  fn: bcbio-0.1.3bcbio_7.tar.gz
   #url: https://github.com/jwm/elasticluster/archive/e6f0f466.tar.gz
-  url: https://github.com/chapmanb/elasticluster/archive/109d2f58.tar.gz
+  url: https://github.com/chapmanb/elasticluster/archive/664dacf.tar.gz
 
 build:
-  number: 5
+  number: 7
 
 requirements:
   build:

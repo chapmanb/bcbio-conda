@@ -24,3 +24,5 @@
         - bcbio-nextgen-vm
         - cpat
         - cnvkit
+        - seaborn
+        - elasticluster
