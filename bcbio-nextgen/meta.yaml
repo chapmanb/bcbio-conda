@@ -1,9 +1,9 @@
 package:
   name: bcbio-nextgen
-  version: '0.8.5a'
+  version: '0.8.6a'
 
 build:
-  number: 4
+  number: 0
 
 source:
   #fn: bcbio-nextgen-0.8.0.tar.gz
