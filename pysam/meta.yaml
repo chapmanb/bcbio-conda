@@ -1,11 +1,11 @@
 package:
   name: pysam
-  version: '0.8.0'
+  version: '0.8.1'
 
 source:
-  fn: pysam-0.8.0.tar.gz
-  url: https://pypi.python.org/packages/source/p/pysam/pysam-0.8.0.tar.gz
-  md5: 7c5ddff512b86ac358810317340be077
+  fn: pysam-0.8.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pysam/pysam-0.8.1.tar.gz
+  md5: 9b2c7b4c1ea63841815725557da188fb
 
 build:
   number: 0
@@ -20,13 +20,9 @@ requirements:
     - python
 
 test:
-  # Python imports
   imports:
     - pysam
     - pysam.include
-    - pysam.include.htslib
-    - pysam.include.samtools
-    - pysam.include.samtools.bcftools
 
 about:
   home: http://code.google.com/p/pysam/
