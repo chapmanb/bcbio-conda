@@ -3,13 +3,15 @@ package:
   version: '0.7.2'
 
 source:
-  hg_url: https://bitbucket.org/james_taylor/bx-python
-  #url: https://pypi.python.org/packages/source/b/bx-python/bx-python-0.7.1.tar.gz
+  #hg_url: https://bitbucket.org/james_taylor/bx-python
+  fn: bx-python-0.7.2.tar.gz
+  url: https://pypi.python.org/packages/source/b/bx-python/bx-python-0.7.2.tar.gz
+  md5: 113d0c755b3c7cb38bf95d069105b299
   patches:
     - setup.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:

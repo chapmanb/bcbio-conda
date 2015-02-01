@@ -3,7 +3,7 @@ package:
   version: 1.2.1
 
 build:
-  number: 1
+  number: 2
 
 source:
   fn: CPAT-1.2.1.tar.gz
@@ -15,6 +15,7 @@ source:
 requirements:
   build:
     - nose
+    - numpy
     - cython
     - python
     - setuptools

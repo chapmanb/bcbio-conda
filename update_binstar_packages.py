@@ -11,9 +11,10 @@ import yaml
 
 
 CONFIG = {
-  "binstar_user": "bcbio",
-  "binstar_repo": "https://conda.binstar.org/bcbio",
-  "targets": ["linux-64", "osx-64"]}
+    "binstar_user": "bcbio",
+    "binstar_repo": "https://conda.binstar.org/bcbio",
+    "targets": ["linux-64", "osx-64"],
+    "numpy": "19"}
 
 def main():
     config = CONFIG
@@ -33,14 +34,14 @@ def _build_and_upload(name, platforms, config):
     fname = subprocess.check_output(["conda", "build", "--output", name]).strip()
     cur_platform = os.path.split(os.path.dirname(fname))[-1]
     if not os.path.exists(fname):
-        subprocess.check_call(["conda", "build", "--no-binstar-upload", name])
+        subprocess.check_call(["conda", "build", "--numpy", config["numpy"], "--no-binstar-upload", name])
     for platform in platforms:
         out = ""
         if platform == cur_platform:
             plat_fname = fname
         else:
             plat_fname = fname.replace("/%s/" % cur_platform, "/%s/" % platform)
-            out_dir = os.path.dirname(plat_fname)
+            out_dir = os.path.dirname(os.path.dirname(plat_fname))
             if not os.path.exists(out_dir):
                 os.makedirs(out_dir)
             if not os.path.exists(plat_fname):
@@ -56,6 +57,7 @@ def _build_and_upload(name, platforms, config):
 def _needs_upload(name, version, build, config):
     """Check if we need to upload libraries for the current package and version.
     """
+    pat_np = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-np(?P<numpy>\d+)py\d+_(?P<build>\d+).tar.*" % name)
     pat = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-.*_(?P<build>\d+).tar.*" % name)
     try:
         info = subprocess.check_output(["binstar", "show", "%s/%s/%s" % (config["binstar_user"], name, version)])
@@ -65,10 +67,15 @@ def _needs_upload(name, version, build, config):
     cur_packages = []
     for line in (x for x in info.split("\n") if x.strip().startswith("+")):
         plat, fname = os.path.split(line.strip().split()[-1])
-        m = pat.search(fname)
+        m = pat_np.search(fname)
+        has_numpy = True
+        if not m:
+            m = pat.search(fname)
+            has_numpy = False
         cur_version = m.group("version")
         cur_build = m.group("build")
-        if version == cur_version and int(cur_build) == int(build):
+        numpy = m.group("numpy") if has_numpy else ""
+        if version == cur_version and int(cur_build) == int(build) and (not has_numpy or numpy == config["numpy"]):
             cur_packages.append(plat)
     return sorted(list(set(config["targets"]) - set(cur_packages)))
 

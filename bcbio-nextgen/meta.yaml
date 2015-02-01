@@ -3,7 +3,7 @@ package:
   version: '0.8.6a'
 
 build:
-  number: 0
+  number: 2
 
 source:
   #fn: bcbio-nextgen-0.8.0.tar.gz
