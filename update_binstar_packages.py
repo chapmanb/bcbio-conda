@@ -49,7 +49,7 @@ def _build_and_upload(name, platforms, config):
         if os.path.exists(plat_fname):
             subprocess.check_call(["binstar", "upload", "-u", config["binstar_user"], plat_fname])
         else:
-            if not out.find("WARNING") and not out.find("has C extensions, skipping"):
+            if not out.find("WARNING") >= 0 and not out.find("has C extensions, skipping") >= 0:
                 raise IOError("Failed to create file for %s on %s" % (name, platform))
             else:
                 print "Unable to prepare %s for %s because it contains C extensions" % (name, platform)

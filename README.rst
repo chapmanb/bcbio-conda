@@ -9,15 +9,15 @@ your PATH and ``conda-build`` installed. Then run::
 
   python update_binstar_packages.py
 
-If you need to build libraries with C extensions on Linux, use a CentOS
-container:
+If you need to build libraries with C extensions on Linux, use a CentOS 5.x
+container::
 
   docker run --net=host -i -t -v `pwd`:/tmp/bcbio-conda centos:centos5 /bin/bash /tmp/bcbio-conda/update_binstar_packages_docker.sh
 
-It will query available packages and try to build and upload any that are not
-present. Depending on your system you may not be able to build some packages.
-For instance, you can't create Mac OSX packages on Linux when they contain C
-extensions.
+The scripts will query available packages and try to build and upload any that
+are not present. Depending on your system you may not be able to build some
+packages.  For instance, you can't create Mac OSX packages on Linux when they
+contain C extensions.
 
 To use these packages, add the `bcbio conda channel
 <https://conda.binstar.org/bcbio>`_::
@@ -27,4 +27,4 @@ To use these packages, add the `bcbio conda channel
 To maintain compatibility, we build packages with:
 
 - numpy 1.9
-- CentOS 5.x (using docker centos/centos5)
+- CentOS 5.x (using docker with centos:centos5)
