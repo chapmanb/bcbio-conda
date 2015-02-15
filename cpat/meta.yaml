@@ -1,26 +1,26 @@
 package:
   name: cpat
-  version: 1.2.1
+  version: 1.2.2
 
 build:
-  number: 2
+  number: 0
 
 source:
-  fn: CPAT-1.2.1.tar.gz
-  url: http://sourceforge.net/projects/rna-cpat/files/CPAT-1.2.1.tar.gz
-  md5: e18ca349882502ffd684af7bcb426fc6
+  fn: CPAT-1.2.2.tar.gz
+  url: http://sourceforge.net/projects/rna-cpat/files/CPAT-1.2.2.tar.gz
+  md5: fc296ec5fbd8b8062fa8353458b89c62
   patches:
     - setup.py.patch
 
 requirements:
   build:
-    - nose
-    - numpy
-    - cython
     - python
     - setuptools
     - bx-python
+    - cython
     - pysam
+    - nose
+    - numpy
 
   run:
     - python
