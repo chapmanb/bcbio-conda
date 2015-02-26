@@ -45,7 +45,8 @@ def _build_and_upload(name, platforms, config):
             if not os.path.exists(out_dir):
                 os.makedirs(out_dir)
             if not os.path.exists(plat_fname):
-                out = subprocess.check_output(["conda", "convert", fname, "-o", out_dir, "-p", platform])
+                out = subprocess.check_output(["conda", "convert", fname, "-o", out_dir, "-p", platform],
+                                              stderr=subprocess.STDOUT)
         if os.path.exists(plat_fname):
             subprocess.check_call(["binstar", "upload", "-u", config["binstar_user"], plat_fname])
         else:
