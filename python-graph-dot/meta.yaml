@@ -1,0 +1,31 @@
+package:
+  name: python-graph-dot
+  version: '1.8.2'
+
+source:
+  fn: b78ca3a.tar.gz
+  url: https://github.com/pmatiello/python-graph/archive/b78ca3a.tar.gz
+  md5: ef9633708bd3927c7af220f9c1f57378
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pydot
+    - python-graph-core
+
+  run:
+    - python
+    - pydot
+    - python-graph-core
+
+test:
+  imports:
+    - pygraph
+
+about:
+  home: https://github.com/pmatiello/python-graph
+  license: MIT

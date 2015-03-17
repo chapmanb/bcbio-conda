@@ -1,0 +1,27 @@
+package:
+  name: python-graph-core
+  version: '1.8.2'
+
+source:
+  fn: b78ca3a.tar.gz
+  url: https://github.com/pmatiello/python-graph/archive/b78ca3a.tar.gz
+  md5: ef9633708bd3927c7af220f9c1f57378
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - pygraph
+
+about:
+  home: https://github.com/pmatiello/python-graph
+  license: MIT
