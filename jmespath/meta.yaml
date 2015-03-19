@@ -1,0 +1,28 @@
+package:
+  name: jmespath
+  version: '0.6.1'
+
+source:
+  fn: jmespath-0.6.1.tar.gz
+  url: https://pypi.python.org/packages/source/j/jmespath/jmespath-0.6.1.tar.gz
+  md5: 59fa8c2bc3fbf3d5244a329093211562
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - setuptools
+
+test:
+  imports:
+    - jmespath
+
+about:
+  home: https://github.com/jmespath/jmespath.py
+  license: MIT

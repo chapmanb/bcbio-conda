@@ -1,0 +1,38 @@
+package:
+  name: awscli
+  version: '1.7.14'
+
+source:
+  fn: awscli-1.7.14.tar.gz
+  url: https://pypi.python.org/packages/source/a/awscli/awscli-1.7.14.tar.gz
+  md5: eab9c7e1366d647762ba8d887841f749
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - botocore
+    - bcdoc
+    - colorama
+    - docutils
+    - rsa
+
+  run:
+    - python
+    - setuptools
+    - botocore
+    - bcdoc
+    - colorama
+    - docutils
+    - rsa
+
+test:
+  imports:
+    - awscli
+
+about:
+  home: http://aws.amazon.com/cli/
+  license: Apache License 2.0
