@@ -3,11 +3,12 @@ package:
   version: '0.1.3bcbio'
 
 source:
-  fn: bcbio-0.1.3bcbio_8.tar.gz
-  url: https://github.com/jwm/elasticluster/archive/abf3ab1.tar.gz
+  fn: bcbio-0.1.3bcbio_9.tar.gz
+  #url: https://github.com/jwm/elasticluster/archive/abf3ab1.tar.gz
+  url: https://github.com/chapmanb/elasticluster/archive/d9a4982.tar.gz
 
 build:
-  number: 8
+  number: 9
 
 requirements:
   build:
