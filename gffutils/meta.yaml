@@ -1,11 +1,11 @@
 package:
   name: gffutils
-  version: 0.8.2
+  version: 0.8.3
 
 source:
-  fn: gffutils-0.8.2.tar.gz
-  url: https://pypi.python.org/packages/source/g/gffutils/gffutils-0.8.2.tar.gz
-  md5: b26e67a29b77bab5c7f175d677f1132b
+  fn: gffutils-0.8.3.tar.gz
+  url: https://pypi.python.org/packages/source/g/gffutils/gffutils-0.8.3.tar.gz
+  md5: bed16cfed2137d8e467eb71495813fbf
 
 requirements:
   build:
@@ -13,12 +13,16 @@ requirements:
     - setuptools
     - simplejson
     - six
+    - pyfaidx
+    - biopython
 
   run:
     - python
     - setuptools
     - simplejson
     - six
+    - pyfaidx
+    - biopython
 
 test:
   imports:
