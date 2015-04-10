@@ -13,7 +13,8 @@ import yaml
 CONFIG = {
     "binstar_user": "bcbio",
     "binstar_repo": "https://conda.binstar.org/bcbio",
-    "targets": ["linux-64", "linux-32", "osx-64"],
+    #"targets": ["linux-64", "linux-32", "osx-64"],
+    "targets": ["linux-64", "osx-64"],
     "numpy": "19"}
 
 def main():

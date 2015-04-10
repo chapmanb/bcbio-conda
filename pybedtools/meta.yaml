@@ -1,0 +1,32 @@
+package:
+  name: pybedtools
+  version: '0.6.9'
+
+source:
+  fn: pybedtools-0.6.9.tar.gz
+  url: https://pypi.python.org/packages/source/p/pybedtools/pybedtools-0.6.9.tar.gz
+  md5: b7df049036422d8c6951412a90e83dca
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - nose
+    - pyyaml
+    - cython
+
+  run:
+    - python
+    - cython
+
+test:
+  # Python imports
+  imports:
+    - pybedtools
+
+about:
+  home: https://github.com/daler/pybedtools
+  license: MIT
