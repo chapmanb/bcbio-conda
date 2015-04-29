@@ -5,7 +5,7 @@
 set -e
 
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-yum install -y wget bzip2 git gcc gcc-c++ patch zlib-devel make gcc44 gcc44-c++
+yum install -y wget bzip2 git gcc gcc-c++ patch zlib-devel make gcc44 gcc44-c++ cmake
 mkdir -p /tmp/bcbio-conda-build
 # gcc 4.8 in /opt/rh/devtoolset-2/root/usr/bin
 # or enable globally with scl enable devtoolset-2 bash

@@ -1,0 +1,35 @@
+package:
+  name: ete2
+  version: '2.2.1072'
+
+source:
+  fn: ete2-2.2.1072.tar.gz
+  url: https://pypi.python.org/packages/source/e/ete2/ete2-2.2.1072.tar.gz
+  md5: 2864ed149ac22afbc533199c9f8cb133
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyqt
+    - numpy
+    - lxml
+
+  run:
+    - python
+    - setuptools
+    - pyqt
+    - numpy
+    - lxml
+
+test:
+  imports:
+    - ete2
+
+about:
+  home: http://etetoolkit.org/
+  license: GPLv3
+  summary: Phylogenetic tree analyses and exploration

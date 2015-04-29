@@ -1,0 +1,35 @@
+package:
+  name: phylowgs
+  version: 20150418
+
+source:
+  git_url: https://github.com/morrislab/phylowgs.git
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+    - ete2
+    - gsl
+
+  run:
+    - python
+    - setuptools
+    - numpy
+    - scipy
+    - ete2
+    - gsl
+
+test:
+  commands:
+    - evolve.py -h
+
+about:
+  home: https://github.com/uci-cbcl/PyLOH
+  license: GPLv3
+  summary:  Application for inferring subclonal composition and evolution from whole-genome sequencing data
