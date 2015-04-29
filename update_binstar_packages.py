@@ -77,7 +77,8 @@ def _needs_upload(name, version, build, config):
         cur_version = m.group("version")
         cur_build = m.group("build")
         numpy = m.group("numpy") if has_numpy else ""
-        if version == cur_version and int(cur_build) == int(build) and (not has_numpy or numpy == config["numpy"]):
+        if (str(version) == str(cur_version) and
+              int(cur_build) == int(build) and (not has_numpy or numpy == config["numpy"])):
             cur_packages.append(plat)
     return sorted(list(set(config["targets"]) - set(cur_packages)))
 

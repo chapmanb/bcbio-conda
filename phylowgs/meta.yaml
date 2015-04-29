@@ -1,6 +1,6 @@
 package:
   name: phylowgs
-  version: 20150418
+  version: '20150418'
 
 source:
   git_url: https://github.com/morrislab/phylowgs.git
