@@ -1,0 +1,31 @@
+package:
+  name: joblib
+  version: '0.9.0.dev0'
+
+source:
+  fn: joblib-c4dfa00.tar.gz
+  url: https://github.com/joblib/joblib/archive/c4dfa00.tar.gz
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - joblib
+    - joblib.test
+
+  requires:
+    - nose
+
+about:
+  home: http://packages.python.org/joblib/
+  license: BSD License
+  summary: 'Lightweight pipelining: using Python functions as pipeline jobs.'
