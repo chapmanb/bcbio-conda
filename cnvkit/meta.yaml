@@ -3,13 +3,13 @@ package:
   version: '0.4.1'
 
 source:
-  fn: CNVkit-0.4.1.tar.gz
-  url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.4.1.tar.gz
-  md5: 4c4241966a27a28cdf1c3bfd6eeca47b
-  #git_url: https://github.com/etal/cnvkit.git
+  #fn: CNVkit-0.4.1.tar.gz
+  #url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.4.1.tar.gz
+  #md5: 4c4241966a27a28cdf1c3bfd6eeca47b
+  git_url: https://github.com/chapmanb/cnvkit.git
 
 build:
-  number: 0
+  number: 4
 
 requirements:
   build:

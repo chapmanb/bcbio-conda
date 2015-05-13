@@ -1,14 +1,17 @@
 package:
   name: bcbio-nextgen
-  version: '0.8.9a0'
+  version: '0.8.9'
 
 build:
   number: 0
 
 source:
-  fn: bcbio-nextgen-37c5b6e.tar.gz
-  url: https://github.com/chapmanb/bcbio-nextgen/archive/37c5b6e.tar.gz
-  #git_url: https://github.com/chapmanb/bcbio-nextgen.git
+  fn: bcbio-nextgen-0.8.9.tar.gz
+  url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.8.9.tar.gz
+  url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.8.9.tar.gz
+  md5: 44fd93a457d682eabfece15da5176423
+  #fn: bcbio-nextgen-37c5b6e.tar.gz
+  #url: https://github.com/chapmanb/bcbio-nextgen/archive/37c5b6e.tar.gz
 
 requirements:
   build:
