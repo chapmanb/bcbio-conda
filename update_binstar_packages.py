@@ -31,9 +31,9 @@ def main():
 def _build_and_upload(name, platforms, config):
     """Build package for the latest versions and upload to binstars on all platforms.
     """
-    print name, platforms
     fname = subprocess.check_output(["conda", "build", "--output", name]).strip()
     cur_platform = os.path.split(os.path.dirname(fname))[-1]
+    print name, platforms, cur_platform
     if not os.path.exists(fname):
         subprocess.check_call(["conda", "build", "--numpy", config["numpy"], "--no-binstar-upload", name])
     for platform in platforms:

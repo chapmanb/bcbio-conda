@@ -1,11 +1,11 @@
 package:
   name: pysam
-  version: '0.8.2.1'
+  version: '0.8.3'
 
 source:
-  fn: pysam-0.8.2.1.tar.gz
-  url: https://pypi.python.org/packages/source/p/pysam/pysam-0.8.2.1.tar.gz
-  md5: daf63c1665fa601fc942f050f334a627
+  fn: pysam-0.8.3.tar.gz
+  url: https://pypi.python.org/packages/source/p/pysam/pysam-0.8.3.tar.gz
+  md5: b1ae2a8ec3c6d20be30b2bc1aa995bbf
 
 build:
   number: 0

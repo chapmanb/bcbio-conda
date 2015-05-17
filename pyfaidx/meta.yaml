@@ -1,10 +1,10 @@
 package:
   name: pyfaidx
-  version: 0.3.8
+  version: 0.4.1.1
 
 source:
-  fn: pyfaidx-0.3.8.tar.gz
-  url: https://github.com/mdshw5/pyfaidx/archive/v0.3.8.tar.gz
+  fn: pyfaidx-0.4.1.1.tar.gz
+  url: https://github.com/mdshw5/pyfaidx/archive/v0.4.1.1.tar.gz
 
 requirements:
   build:

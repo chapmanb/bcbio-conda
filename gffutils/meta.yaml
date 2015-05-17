@@ -1,11 +1,11 @@
 package:
   name: gffutils
-  version: 0.8.3.1
+  version: 0.8.4rc1
 
 source:
-  fn: gffutils-0.8.3.1.tar.gz
-  url: https://pypi.python.org/packages/source/g/gffutils/gffutils-0.8.3.1.tar.gz
-  md5: 69b0a47ad1acbd809c68d930044a11ae
+  fn: gffutils-0.8.4rc1.tar.gz
+  url: https://pypi.python.org/packages/source/g/gffutils/gffutils-0.8.4rc1.tar.gz
+  md5: 9d46b3dfac35ad812df2448f20c5e8cc
 
 requirements:
   build:
