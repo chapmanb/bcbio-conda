@@ -8,7 +8,7 @@ source:
   md5: f323950002a3a20fb625eae9217cc232
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -26,6 +26,8 @@ test:
   imports:
     - vgraph
     - vgraph.vargraph
+  commands:
+    - vgraph -h
 
 about:
   home: https://github.com/bioinformed/vgraph
