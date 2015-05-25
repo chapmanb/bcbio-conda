@@ -1,0 +1,42 @@
+package:
+  name: hap.py
+  version: '0.1.6'
+
+source:
+  fn: hap.py-0.1.6.tar.gz
+  url: https://github.com/sequencing/hap.py/archive/v0.1.6-public.tar.gz
+  md5: ce4aa8365405ab4019bff3e032b89186
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - cython
+    - numpy
+    - pandas
+    - pybedtools
+    - pysam
+    - nose
+    - bx-python
+
+  run:
+    - python
+    - cython
+    - numpy
+    - pandas
+    - pybedtools
+    - pysam
+    - nose
+    - bx-python
+
+#test:
+#  commands:
+#    - hap.py -h
+#    - som.py -h
+
+about:
+  home: https://github.com/sequencing/hap.py
+  license: BSD

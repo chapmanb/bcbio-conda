@@ -17,6 +17,9 @@ CONFIG = {
     "targets": ["linux-64", "osx-64"],
     "numpy": "19"}
 
+CUSTOM_TARGETS = {
+    "hap.py": ["linux-64"]}
+
 def main():
     config = CONFIG
     subprocess.check_call(["conda", "config", "--add", "channels", config["binstar_repo"]])
@@ -80,7 +83,10 @@ def _needs_upload(name, version, build, config):
         if (str(version) == str(cur_version) and
               int(cur_build) == int(build) and (not has_numpy or numpy == config["numpy"])):
             cur_packages.append(plat)
-    return sorted(list(set(config["targets"]) - set(cur_packages)))
+    if name in CUSTOM_TARGETS:
+        return sorted(list(set(CUSTOM_TARGETS[name]) - set(cur_packages)))
+    else:
+        return sorted(list(set(config["targets"]) - set(cur_packages)))
 
 def _meta_to_version(in_file):
     """Extract version information from meta description file.
