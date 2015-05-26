@@ -1,9 +1,9 @@
 #!/bin/bash
-sed -i '/^configure_files.*libz/s/^/#/' CMakeLists.txt
-sed -i '/^configure_files.*tabix/s/^/#/' CMakeLists.txt
-sed -i '/^configure_files.*bgzip/s/^/#/' CMakeLists.txt
-sed -i '/^configure_files.*bcftools/s/^/#/' CMakeLists.txt
-sed -i '/^configure_files.*samtools/s/^/#/' CMakeLists.txt
+sed -i -e '/^configure_files.*libz/s/^/#/' CMakeLists.txt
+sed -i -e '/^configure_files.*tabix/s/^/#/' CMakeLists.txt
+sed -i -e '/^configure_files.*bgzip/s/^/#/' CMakeLists.txt
+sed -i -e '/^configure_files.*bcftools/s/^/#/' CMakeLists.txt
+sed -i -e '/^configure_files.*samtools/s/^/#/' CMakeLists.txt
 mkdir -p build
 cd build
 if [ -n "$OSX_ARCH" ]; then
