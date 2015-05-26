@@ -17,8 +17,7 @@ CONFIG = {
     "targets": ["linux-64", "osx-64"],
     "numpy": "19"}
 
-CUSTOM_TARGETS = {
-    "hap.py": ["linux-64"]}
+CUSTOM_TARGETS = {}
 
 def main():
     config = CONFIG
