@@ -1,9 +1,10 @@
 package:
   name: phylowgs
-  version: '20150418'
+  version: '20150612'
 
 source:
-  git_url: https://github.com/morrislab/phylowgs.git
+  fn: phylowgs-965cdcc.tar.gz
+  url: https://github.com/morrislab/phylowgs/archive/965cdcc.tar.gz
 
 build:
   number: 0
@@ -30,6 +31,6 @@ test:
     - evolve.py -h
 
 about:
-  home: https://github.com/uci-cbcl/PyLOH
+  home: https://github.com/morrislab/phylowgs
   license: GPLv3
   summary:  Application for inferring subclonal composition and evolution from whole-genome sequencing data

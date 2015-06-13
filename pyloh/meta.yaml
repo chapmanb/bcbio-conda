@@ -1,10 +1,10 @@
 package:
   name: pyloh
-  version: '1.4.0'
+  version: '1.4.1'
 
 source:
-  fn: pyloh-1.4.0.tar.gz
-  url: https://github.com/uci-cbcl/PyLOH/archive/1.4.0.tar.gz
+  fn: pyloh-1.4.1.tar.gz
+  url: https://github.com/uci-cbcl/PyLOH/archive/1.4.1.tar.gz
 
 build:
   number: 0
