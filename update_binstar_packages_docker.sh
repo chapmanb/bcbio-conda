@@ -13,9 +13,9 @@ wget http://people.centos.org/tru/devtools-2/devtools-2.repo -O /etc/yum.repos.d
 yum install -y devtoolset-2-gcc devtoolset-2-binutils devtoolset-2-gcc-c++
 
 # boost for hap.py build
-#yum install cmake28
+#yum install -y cmake28
 #wget http://downloads.sourceforge.net/project/boost/boost/1.55.0/boost_1_55_0.tar.bz2
-#tar xjf boost_1_55_0.tar.bz2
+#tar -xjf boost_1_55_0.tar.bz2
 #cd boost_1_55_0
 #./bootstrap.sh --with-libraries=filesystem,chrono,thread,iostreams,system,regex,test,program_options
 #./b2 --prefix=$HOME/boost_1_55_0_install install
@@ -25,6 +25,11 @@ wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 bash Miniconda-latest-Linux-x86_64.sh -b -p /tmp/bcbio-conda-build/anaconda
 export PATH=/tmp/bcbio-conda-build/anaconda/bin:$PATH
 conda install -y conda conda-build binstar pyyaml toolz jinja2
-
 cd /tmp/bcbio-conda
-python update_binstar_packages.py
+binstar login --username chapmanb --password `cat binstarpwd.txt`
+
+scl enable devtoolset-2 - << \EOF
+cd /tmp/bcbio-conda
+export PATH=/tmp/bcbio-conda-build/anaconda/bin:$PATH
+/tmp/bcbio-conda-build/anaconda/bin/python update_binstar_packages.py
+EOF
