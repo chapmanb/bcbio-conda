@@ -1,10 +1,10 @@
 package:
   name: phylowgs
-  version: '20150612'
+  version: '20150615'
 
 source:
-  fn: phylowgs-965cdcc.tar.gz
-  url: https://github.com/morrislab/phylowgs/archive/965cdcc.tar.gz
+  fn: phylowgs-11ce765.tar.gz
+  url: https://github.com/chapmanb/phylowgs/archive/11ce765.tar.gz
 
 build:
   number: 0
