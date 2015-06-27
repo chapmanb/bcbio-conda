@@ -1,13 +1,13 @@
 package:
   name: phylowgs
-  version: '20150615'
+  version: '20150625'
 
 source:
-  fn: phylowgs-11ce765.tar.gz
-  url: https://github.com/chapmanb/phylowgs/archive/11ce765.tar.gz
+  fn: phylowgs-f38ccbc.tar.gz
+  url: https://github.com/chapmanb/phylowgs/archive/f38ccbc.tar.gz
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
