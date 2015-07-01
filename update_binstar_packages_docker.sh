@@ -5,7 +5,7 @@
 set -e
 
 rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-yum install -y wget bzip2 bzip2-devel git gcc gcc-c++ patch zlib-devel make gcc44 gcc44-c++ cmake
+yum install -y wget bzip2 bzip2-devel git gcc gcc-c++ patch zlib-devel make gcc44 gcc44-c++ cmake ncurses-devel
 mkdir -p /tmp/bcbio-conda-build
 # gcc 4.8 in /opt/rh/devtoolset-2/root/usr/bin
 # or enable globally with scl enable devtoolset-2 bash
@@ -26,7 +26,7 @@ bash Miniconda-latest-Linux-x86_64.sh -b -p /tmp/bcbio-conda-build/anaconda
 export PATH=/tmp/bcbio-conda-build/anaconda/bin:$PATH
 conda install -y conda conda-build binstar pyyaml toolz jinja2
 cd /tmp/bcbio-conda
-binstar login --username chapmanb --password `cat binstarpwd.txt`
+binstar login --hostname bcbio-conda-auto --username chapmanb --password `cat binstarpwd.txt`
 
 scl enable devtoolset-2 - << \EOF
 cd /tmp/bcbio-conda
