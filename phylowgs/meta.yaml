@@ -1,10 +1,10 @@
 package:
   name: phylowgs
-  version: '20150625'
+  version: '20150701'
 
 source:
-  fn: phylowgs-f38ccbc.tar.gz
-  url: https://github.com/chapmanb/phylowgs/archive/f38ccbc.tar.gz
+  fn: phylowgs-2d555c9.tar.gz
+  url: https://github.com/chapmanb/phylowgs/archive/2d555c9.tar.gz
 
 build:
   number: 0
@@ -26,9 +26,9 @@ requirements:
     - ete2
     - gsl
 
-test:
-  commands:
-    - evolve.py -h
+#test:
+#  commands:
+#    - evolve.py -h
 
 about:
   home: https://github.com/morrislab/phylowgs
