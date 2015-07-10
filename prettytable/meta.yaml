@@ -1,0 +1,27 @@
+package:
+    name: prettytable
+    version: 0.7.2
+
+source:
+    fn: prettytable-0.7.2.tar.bz2
+    url: https://pypi.python.org/packages/source/P/PrettyTable/prettytable-0.7.2.tar.bz2
+    md5: 760dc900590ac3c46736167e09fa463a
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - setuptools
+
+    run:
+        - python
+
+test:
+    imports:
+        - prettytable
+
+about:
+    home: http://code.google.com/p/prettytable/
+    license: BSD License
