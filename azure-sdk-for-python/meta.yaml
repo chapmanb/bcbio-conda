@@ -1,0 +1,30 @@
+package:
+    name: azure-sdk-for-python
+    version: v0.11.1
+
+source:
+    git_url: https://github.com/Azure/azure-sdk-for-python
+    git_tag: v0.11.1
+
+build:
+    number: 0
+
+requirements:
+    build:
+        - python
+        - distribute
+
+    run:
+        - six
+        - python
+
+test:
+    imports:
+        - azure
+
+about:
+    home: https://github.com/WindowsAzure/azure-sdk-for-python
+    license: Apache License 2.0
+    summary: "This project provides a set of Python packages that make it
+        easy to access the Microsoft Azure components such as
+        ServiceManagement, Storage, and ServiceBus."
