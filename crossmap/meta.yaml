@@ -1,0 +1,39 @@
+package:
+  name: crossmap
+  version: '0.1.8'
+
+source:
+  fn: CrossMap-0.1.8.tar.gz
+  url: http://downloads.sourceforge.net/project/crossmap/CrossMap-0.1.8.tar.gz
+  md5: 3f0361e61560b7d5cca69b05ee580819
+  patches:
+    - setup_remove_deps.diff
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - nose
+    - setuptools
+    - cython
+    - numpy
+    - pysam
+    - bx-python
+
+  run:
+    - python
+    - numpy
+    - pysam
+    - bx-python
+
+test:
+  commands:
+    - CrossMap.py bed
+    - CrossMap.py vcf
+
+about:
+  home: http://crossmap.sourceforge.net
+  license: GPLv3
+  summary: Convenient conversion of genome coordinates between different assemblies

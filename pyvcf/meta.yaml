@@ -6,10 +6,11 @@ source:
   #fn: PyVCF-0.6.7.tar.gz
   #url: https://pypi.python.org/packages/source/P/PyVCF/PyVCF-0.6.7.tar.gz
   #md5: 51b57ce99e0c2f7be2a18d08d8f87734
-  git_url: https://github.com/jamescasbon/PyVCF.git
+  fn: PyVCF-ec193b12.tar.gz
+  url: https://github.com/jamescasbon/PyVCF/archive/ec193b12.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:

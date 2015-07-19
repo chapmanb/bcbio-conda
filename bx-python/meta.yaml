@@ -1,22 +1,21 @@
 package:
   name: bx-python
-  version: '0.7.2'
+  version: '0.7.3'
 
 source:
   #hg_url: https://bitbucket.org/james_taylor/bx-python
-  fn: bx-python-0.7.2.tar.gz
-  url: https://pypi.python.org/packages/source/b/bx-python/bx-python-0.7.2.tar.gz
-  md5: 113d0c755b3c7cb38bf95d069105b299
-  patches:
-    - setup.patch
+  fn: bx-python-0.7.3.tar.gz
+  url: https://pypi.python.org/packages/source/b/bx-python/bx-python-0.7.3.tar.gz
+  md5: d8c50c01c9e421bae0bbdbfa00fef6e4
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
     - python
     - setuptools
+    - cython
     - nose
     - numpy
 
@@ -32,6 +31,7 @@ test:
     - bx.intervals
     - bx.align
     - bx.bbi
+    - bx.bbi.bigwig_file
     - bx.cookbook
     - bx.arrays
     - bx.motif.io
