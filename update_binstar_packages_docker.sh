@@ -24,9 +24,9 @@ cd /tmp/bcbio-conda-build
 wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh
 bash Miniconda-latest-Linux-x86_64.sh -b -p /tmp/bcbio-conda-build/anaconda
 export PATH=/tmp/bcbio-conda-build/anaconda/bin:$PATH
-conda install -y conda conda-build binstar pyyaml toolz jinja2
+conda install -y conda conda-build anaconda-client pyyaml toolz jinja2
 cd /tmp/bcbio-conda
-binstar login --hostname bcbio-conda-auto --username chapmanb --password `cat binstarpwd.txt`
+anaconda login --hostname bcbio-conda-auto --username chapmanb --password `cat binstarpwd.txt`
 
 scl enable devtoolset-2 - << \EOF
 cd /tmp/bcbio-conda

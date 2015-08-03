@@ -4,8 +4,12 @@
 
 To build and upload for a specific platform, first ask
 `Brad <http://github.com/chapmanb>`_ for permission to write to the
-bcbio organization. You will need to have ``conda`` and ``binstar`` available on
-your PATH and ``conda-build`` installed. Then run::
+bcbio organization. You will need to have ``conda`` and ``anaconda`` available on
+your PATH and ``conda-build`` installed::
+
+  conda install conda anaconda-client conda-build
+
+Then run::
 
   python update_binstar_packages.py
 
@@ -20,9 +24,9 @@ packages.  For instance, you can't create Mac OSX packages on Linux when they
 contain C extensions.
 
 To use these packages, add the `bcbio conda channel
-<https://conda.binstar.org/bcbio>`_::
+<https://anaconda.org/bcbio>`_::
 
-  conda config --add channels https://conda.binstar.org/bcbio
+  conda config --add channels bcbio
 
 To maintain compatibility, we build packages with:
 

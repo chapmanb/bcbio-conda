@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Update conda packages on binstars with latest versions for multiple platforms.
+"""Update conda packages on anaconda.org/binstar.org with latest versions for multiple platforms.
 
 """
 import os
@@ -11,8 +11,8 @@ import yaml
 
 
 CONFIG = {
-    "binstar_user": "bcbio",
-    "binstar_repo": "https://conda.binstar.org/bcbio",
+    "remote_user": "bcbio",
+    "remote_repo": "bcbio",
     #"targets": ["linux-64", "linux-32", "osx-64"],
     "targets": ["linux-64", "osx-64"],
     "numpy": "19"}
@@ -22,7 +22,7 @@ CUSTOM_TARGETS = {
 
 def main():
     config = CONFIG
-    subprocess.check_call(["conda", "config", "--add", "channels", config["binstar_repo"]])
+    subprocess.check_call(["conda", "config", "--add", "channels", config["remote_repo"]])
     for name in sorted([x for x in os.listdir(os.getcwd()) if os.path.isdir(x)]):
         meta_file = os.path.join(name, "meta.yaml")
         if os.path.exists(meta_file):
@@ -32,9 +32,9 @@ def main():
                 _build_and_upload(name, needs_build, config)
 
 def _build_and_upload(name, platforms, config):
-    """Build package for the latest versions and upload to binstars on all platforms.
+    """Build package for the latest versions and upload on all platforms.
     """
-    fname = subprocess.check_output(["conda", "build", "--output", name]).strip()
+    fname = subprocess.check_output(["conda", "build", "--numpy", config["numpy"], "--output", name]).strip()
     cur_platform = os.path.split(os.path.dirname(fname))[-1]
     print name, platforms, cur_platform
     if not os.path.exists(fname):
@@ -52,7 +52,7 @@ def _build_and_upload(name, platforms, config):
                 out = subprocess.check_output(["conda", "convert", fname, "-o", out_dir, "-p", platform],
                                               stderr=subprocess.STDOUT)
         if os.path.exists(plat_fname):
-            subprocess.check_call(["binstar", "upload", "-u", config["binstar_user"], plat_fname])
+            subprocess.check_call(["anaconda", "upload", "-u", config["remote_user"], plat_fname])
         else:
             if not out.find("WARNING") >= 0 and not out.find("has C extensions, skipping") >= 0:
                 raise IOError("Failed to create file for %s on %s" % (name, platform))
@@ -65,7 +65,7 @@ def _needs_upload(name, version, build, config):
     pat_np = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-np(?P<numpy>\d+)py\d+_(?P<build>\d+).tar.*" % name)
     pat = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-.*_(?P<build>\d+).tar.*" % name)
     try:
-        info = subprocess.check_output(["binstar", "show", "%s/%s/%s" % (config["binstar_user"], name, version)])
+        info = subprocess.check_output(["anaconda", "show", "%s/%s/%s" % (config["remote_user"], name, version)])
     # no version found
     except subprocess.CalledProcessError:
         info = ""
