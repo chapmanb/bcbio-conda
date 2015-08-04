@@ -3,11 +3,11 @@ package:
   version: '0.1.0a'
 
 build:
-  number: 62
+  number: 63
 
 source:
-  fn: bcbio-nextgen-vm-c99b905442.tar.gz
-  url: https://github.com/chapmanb/bcbio-nextgen-vm/archive/c99b905442.tar.gz
+  fn: bcbio-nextgen-vm-3c7027d1b0.tar.gz
+  url: https://github.com/chapmanb/bcbio-nextgen-vm/archive/3c7027d1b0.tar.gz
   #git_url: https://github.com/chapmanb/bcbio-nextgen-vm.git
 
 requirements:

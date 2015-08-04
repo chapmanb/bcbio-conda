@@ -1,15 +1,15 @@
 package:
   name: cnvkit
-  version: '0.5.1'
+  version: '0.6.2a'
 
 source:
-  fn: CNVkit-0.5.1.tar.gz
-  url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.5.1.tar.gz
-  md5: eeb91521aca3b077b694116a12206626
-  #git_url: https://github.com/chapmanb/cnvkit.git
+  fn: CNVkit-fa8bebd.tar.gz
+  url: https://github.com/chapmanb/cnvkit/archive/fa8bebd.tar.gz
+  #fn: CNVkit-0.6.1.tar.gz
+  #url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.6.1.tar.gz
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -21,6 +21,7 @@ requirements:
     - atlas # [not osx]
     - numpy
     - scipy
+    - pandas
     - matplotlib
     - biopython
     - reportlab
