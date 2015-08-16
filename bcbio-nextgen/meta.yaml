@@ -1,6 +1,6 @@
 package:
   name: bcbio-nextgen
-  version: '0.9.1a'
+  version: '0.9.2a'
 
 build:
   number: 1
@@ -9,8 +9,8 @@ source:
   #fn: bcbio-nextgen-0.9.0.tar.gz
   #url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.9.0.tar.gz
   #md5: d913ecd9acc270319199a6f28e2c1af8
-  fn: bcbio-nextgen-63a013c.tar.gz
-  url: https://github.com/chapmanb/bcbio-nextgen/archive/63a013c.tar.gz
+  fn: bcbio-nextgen-ce3e999.tar.gz
+  url: https://github.com/chapmanb/bcbio-nextgen/archive/ce3e999.tar.gz
 
 requirements:
   build:
@@ -28,7 +28,7 @@ requirements:
     - cpat
     - cython
     - gffutils
-    - ipython
+    - ipyparallel
     - ipython-cluster-helper
     - joblib
     - logbook

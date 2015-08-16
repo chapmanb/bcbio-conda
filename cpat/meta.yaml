@@ -3,7 +3,7 @@ package:
   version: 1.2.2
 
 build:
-  number: 0
+  number: 1
 
 source:
   fn: CPAT-1.2.2.tar.gz

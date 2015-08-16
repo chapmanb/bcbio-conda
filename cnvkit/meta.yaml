@@ -3,13 +3,13 @@ package:
   version: '0.6.2a'
 
 source:
-  fn: CNVkit-fa8bebd.tar.gz
-  url: https://github.com/chapmanb/cnvkit/archive/fa8bebd.tar.gz
+  fn: CNVkit-7bcf86e.tar.gz
+  url: https://github.com/etal/cnvkit/archive/7bcf86e.tar.gz
   #fn: CNVkit-0.6.1.tar.gz
   #url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.6.1.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
