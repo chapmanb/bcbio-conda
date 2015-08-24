@@ -3,11 +3,13 @@ package:
   version: 0.0.2
 
 source:
-  fn: svtyper-0.0.2.tar.gz
-  url: https://github.com/hall-lab/svtyper/archive/v0.0.2.tar.gz
+  fn: svtyper-2c2ef7f.tar.gz
+  url: https://github.com/hall-lab/svtyper/archive/2c2ef7f.tar.gz
+  #fn: svtyper-0.0.2.tar.gz
+  #url: https://github.com/hall-lab/svtyper/archive/v0.0.2.tar.gz
 
 build:
-  number: 0
+  number: 2
 
 requirements:
   build:
