@@ -3,11 +3,13 @@ package:
   version: '0.3.2a'
 
 source:
-  fn: metasv-8e77859.tar.gz
-  url: https://github.com/chapmanb/metasv/archive/8e77859.tar.gz
+  fn: metasv-0.3.2a0.tar.gz
+  url: https://github.com/bioinform/metasv/archive/0.3.2a0.tar.gz
+  #fn: metasv-8e77859.tar.gz
+  #url: https://github.com/chapmanb/metasv/archive/8e77859.tar.gz
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
