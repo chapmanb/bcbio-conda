@@ -1,11 +1,11 @@
 package:
   name: cyvcf2
-  version: '0.1.8'
+  version: '0.1.9'
 
 source:
-  fn: cyvcf2-0.1.8.tar.gz
-  url: https://pypi.python.org/packages/source/c/cyvcf2/cyvcf2-0.1.8.tar.gz
-  md5: cfe2e55343138663f546e3d7fa201298
+  fn: cyvcf2-0.1.9.tar.gz
+  url: https://pypi.python.org/packages/source/c/cyvcf2/cyvcf2-0.1.9.tar.gz
+  md5: f59d4787dff6af5be0a82cbfb26ac491
 
 build:
   number: 0

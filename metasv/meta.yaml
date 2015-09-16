@@ -1,15 +1,16 @@
 package:
   name: metasv
-  version: '0.3.2a'
+  version: '0.4.0'
 
 source:
-  fn: metasv-0.3.2a0.tar.gz
-  url: https://github.com/bioinform/metasv/archive/0.3.2a0.tar.gz
-  #fn: metasv-8e77859.tar.gz
-  #url: https://github.com/chapmanb/metasv/archive/8e77859.tar.gz
+  #fn: metasv-0.3.2a0.tar.gz
+  #url: https://github.com/bioinform/metasv/archive/0.3.2a0.tar.gz
+
+  fn: metasv-d55bf34.tar.gz
+  url: https://github.com/bioinform/metasv/archive/d55bf34.tar.gz
 
 build:
-  number: 3
+  number: 0
 
 requirements:
   build:
