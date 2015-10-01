@@ -1,15 +1,15 @@
 package:
   name: cnvkit
-  version: '0.6.2a'
+  version: '0.7.1'
 
 source:
-  fn: CNVkit-7bcf86e.tar.gz
-  url: https://github.com/etal/cnvkit/archive/7bcf86e.tar.gz
-  #fn: CNVkit-0.6.1.tar.gz
-  #url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.6.1.tar.gz
+  #fn: CNVkit-1303375.tar.gz
+  #url: https://github.com/etal/cnvkit/archive/1303375.tar.gz
+  fn: CNVkit-0.7.1.tar.gz
+  url: https://pypi.python.org/packages/source/C/CNVkit/CNVkit-0.7.1.tar.gz
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
