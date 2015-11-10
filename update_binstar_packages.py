@@ -15,10 +15,13 @@ CONFIG = {
     "remote_repo": "bcbio",
     #"targets": ["linux-64", "linux-32", "osx-64"],
     "targets": ["linux-64", "osx-64"],
-    "numpy": "19"}
+    "numpy": "110",
+    "python": "27"}
 
 CUSTOM_TARGETS = {
-    "hap.py": ["linux-64"]}
+    "hap.py": ["linux-64"],
+    "cyvcf2": ["linux-64"]
+    }
 
 def main():
     config = CONFIG
@@ -34,30 +37,33 @@ def main():
 def _build_and_upload(name, platforms, config):
     """Build package for the latest versions and upload on all platforms.
     """
-    fname = subprocess.check_output(["conda", "build", "--numpy", config["numpy"], "--output", name]).strip()
+    fname = subprocess.check_output(["conda", "build", "--python", config["python"],
+                                     "--numpy", config["numpy"], "--output", name]).strip().decode("utf-8")
     cur_platform = os.path.split(os.path.dirname(fname))[-1]
-    print name, platforms, cur_platform
+    print(name, platforms, cur_platform)
     if not os.path.exists(fname):
-        subprocess.check_call(["conda", "build", "--numpy", config["numpy"], "--no-binstar-upload", name])
+        subprocess.check_call(["conda", "build", "--python", config["python"],
+                               "--numpy", config["numpy"], "--no-binstar-upload", name])
     for platform in platforms:
         out = ""
         if platform == cur_platform:
-            plat_fname = fname
+            plat_fname = str(fname)
         else:
-            plat_fname = fname.replace("/%s/" % cur_platform, "/%s/" % platform)
+            plat_fname = str(fname).replace("/%s/" % cur_platform, "/%s/" % platform)
             out_dir = os.path.dirname(os.path.dirname(plat_fname))
             if not os.path.exists(out_dir):
                 os.makedirs(out_dir)
             if not os.path.exists(plat_fname):
                 out = subprocess.check_output(["conda", "convert", fname, "-o", out_dir, "-p", platform],
-                                              stderr=subprocess.STDOUT)
+                                              stderr=subprocess.STDOUT).decode("utf-8")
+        print(str(plat_fname))
         if os.path.exists(plat_fname):
             subprocess.check_call(["anaconda", "upload", "-u", config["remote_user"], plat_fname])
         else:
-            if not out.find("WARNING") >= 0 and not out.find("has C extensions, skipping") >= 0:
+            if not str(out).find("WARNING") >= 0 and not str(out).find("has C extensions, skipping") >= 0:
                 raise IOError("Failed to create file for %s on %s" % (name, platform))
             else:
-                print "Unable to prepare %s for %s because it contains C extensions" % (name, platform)
+                print("Unable to prepare %s for %s because it contains C extensions" % (name, platform))
 
 def _needs_upload(name, version, build, config):
     """Check if we need to upload libraries for the current package and version.
@@ -65,12 +71,13 @@ def _needs_upload(name, version, build, config):
     pat_np = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-np(?P<numpy>\d+)py\d+_(?P<build>\d+).tar.*" % name)
     pat = re.compile("%s-(?P<version>[\d\.a-zA-Z]+)-.*_(?P<build>\d+).tar.*" % name)
     try:
-        info = subprocess.check_output(["anaconda", "show", "%s/%s/%s" % (config["remote_user"], name, version)])
+        info = subprocess.check_output(["anaconda", "show", "%s/%s/%s" %
+                                        (config["remote_user"], name, version)]).decode("utf-8")
     # no version found
     except subprocess.CalledProcessError:
         info = ""
     cur_packages = []
-    for line in (x for x in info.split("\n") if x.strip().startswith("+")):
+    for line in (x for x in str(info).split("\n") if x.strip().startswith("+")):
         plat, fname = os.path.split(line.strip().split()[-1])
         m = pat_np.search(fname)
         has_numpy = True

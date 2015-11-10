@@ -6,11 +6,11 @@ source:
   #fn: metasv-0.3.2a0.tar.gz
   #url: https://github.com/bioinform/metasv/archive/0.3.2a0.tar.gz
 
-  fn: metasv-d55bf34.tar.gz
-  url: https://github.com/bioinform/metasv/archive/d55bf34.tar.gz
+  fn: metasv-781e11d.tar.gz
+  url: https://github.com/bioinform/metasv/archive/781e11d.tar.gz
 
 build:
-  number: 0
+  number: 3
 
 requirements:
   build:

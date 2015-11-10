@@ -30,5 +30,5 @@ To use these packages, add the `bcbio conda channel
 
 To maintain compatibility, we build packages with:
 
-- numpy 1.9
+- numpy 1.10
 - CentOS 5.x (using docker with centos:centos5)
