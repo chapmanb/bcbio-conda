@@ -1,15 +1,15 @@
 package:
   name: bcbio-nextgen
-  version: '0.9.5a0'
+  version: '0.9.5'
 
 build:
-  number: 6
+  number: 0
 
 source:
-  #fn: bcbio-nextgen-0.9.4.tar.gz
-  #url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.9.4.tar.gz
-  fn: bcbio-nextgen-acd79b4.tar.gz
-  url: https://github.com/chapmanb/bcbio-nextgen/archive/acd79b4.tar.gz
+  fn: bcbio-nextgen-0.9.5.tar.gz
+  url: https://pypi.python.org/packages/source/b/bcbio-nextgen/bcbio-nextgen-0.9.5.tar.gz
+  #fn: bcbio-nextgen-acd79b4.tar.gz
+  #url: https://github.com/chapmanb/bcbio-nextgen/archive/acd79b4.tar.gz
 
 requirements:
   build:

@@ -37,13 +37,14 @@ def main():
 def _build_and_upload(name, platforms, config):
     """Build package for the latest versions and upload on all platforms.
     """
+    os.environ["CONDA_NPY"] = config["numpy"]
     fname = subprocess.check_output(["conda", "build", "--python", config["python"],
-                                     "--numpy", config["numpy"], "--output", name]).strip().decode("utf-8")
+                                     "--output", name]).strip().decode("utf-8")
     cur_platform = os.path.split(os.path.dirname(fname))[-1]
     print(name, platforms, cur_platform)
     if not os.path.exists(fname):
         subprocess.check_call(["conda", "build", "--python", config["python"],
-                               "--numpy", config["numpy"], "--no-binstar-upload", name])
+                               "--no-binstar-upload", name])
     for platform in platforms:
         out = ""
         if platform == cur_platform:
