@@ -1,3 +1,18 @@
+# Deprecated
+
+These packages migrated to the `bioconda
+<https://github.com/bioconda/bioconda-recipes>`_ community project. bioconda is
+the best source for up to date biological packages for conda. If you have
+interest in any non-migrated tools, feel free to use these recipes over there
+or raise a pull request for us to move them.
+
+If you're using the bcbio channel with conda you can update to bioconda with::
+
+    conda config --remove channels bcbio
+    conda config --add channels bioconda
+
+## bcbio-conda
+
 `conda <http://conda.pydata.org/docs/>`_ recipes for `bcbio-nextgen
 <https://github.com/chapmanb/bcbio-nextgen>`_ and `bcbio-nextgen-vm
 <https://github.com/chapmanb/bcbio-nextgen-vm>`_.
